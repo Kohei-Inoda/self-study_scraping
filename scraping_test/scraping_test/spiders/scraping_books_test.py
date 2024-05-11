@@ -1,6 +1,7 @@
 import scrapy
 
 
+
 class ScrapingBooksTestSpider(scrapy.Spider):
     name = "scraping_books_test"
     
@@ -15,6 +16,6 @@ class ScrapingBooksTestSpider(scrapy.Spider):
                 'price': selector.css('.price_color::text').extract_first()
             }
 
-        next_page_link = response.css('li.next a::attr(href)').extract_first()
-        if next_page_link:
-            yield response.follow(next_page_link, callback=self.response_parser)
+        # next_page_link = response.css('li.next a::attr(href)').extract_first()
+        # if next_page_link:
+        #     yield response.follow(next_page_link, callback=self.response_parser)
