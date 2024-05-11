@@ -1,1 +1,3 @@
-# self-study_scraping
+# self-study of Scraping demo website
+
+`print("konnichiha")`
